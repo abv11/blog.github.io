@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Contato</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link para o arquivo CSS externo -->
+    <link rel="website icon" type="png" href="peixinho.png">
+    <!-- Link para o ícone da página -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <body>
+        <header>
+            <nav>
+                <h1> Contato</h1>
+                <ul>
+                    <li><button><a href="index.html">Home</a></button></li>
+                    <li><button><a href="sobre.html">Sobre</a></button></li>
+                    <li><button><a href="portfolio.html">Portfólio</a></button></li>
+                    <!-- Esta é a barra de navegação. Aqui, criei uma lista não ordenada (ul) com várias opções de navegação.
+                    Cada opção é um item de lista (li) com um link (a) que direciona para uma página diferente do site. -->
+                </ul>
+            </nav>
+        </header>
+        <section>
+            <main>
+                <!-- Define uma seção para informações de contato -->
+                <h2> Informações de Contato</h2>
+                <!-- Cabeçalho para a seção de informações de contato -->
+                <form id="contactForm">
+                    <!-- Formulário para coletar informações de contato do usuário -->
+                    <br><label for="nome">Nome completo:</label>
+                    <input id="nome" type="text" required><br>
+                    <!-- Campo de entrada para o nome completo, campo obrigatório -->
+
+                    <br><label for="email">Email:</label>
+                    <input id="email" type="email" required><br>
+                    <!-- Campo de entrada para email, campo obrigatório -->
+
+                    <br><label for="contato">Contato:</label>
+                    <input id="contato" type="tel" required><br>
+                    <!-- Campo de entrada para o número de telefone, campo obrigatório -->
+
+                    <br><label for="endereco">Endereço:</label>
+                    <input id="endereco" type="text" required><br>
+                    <!-- Campo de entrada para o endereço, campo obrigatório -->
+
+                    <br><label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" required></textarea><br>
+                    <!-- Área de texto para mensagem do usuário, campo obrigatório -->
+
+                    <br><br><button type="submit" formaction="dadosrecebidos.html">Enviar</button>
+                    <!-- Botão de envio para o formulário -->
+                    <button type="reset">Apagar</button>
+                    <!-- Botão de redefinir para o formulário -->
+                </form>
+
+            </main>
+        </section>
+
+        <section>
+            <h2>Dados inseridos:</h2>
+
+            <p id="result"></p>
+            <!-- Parágrafo para exibir os dados enviados -->
+        </section>
+        <script>
+            // Função para lidar com o envio do formulário
+            const contactForm = document.getElementById('contactForm');
+            const result = document.getElementById('result');
+
+            contactForm.addEventListener('submit', (event) => {
+                event.preventDefault(); // Impede o comportamento padrão de envio do formulário
+
+                const nome = document.getElementById('nome').value;
+                const email = document.getElementById('email').value;
+                const contato = document.getElementById('contato').value;
+                const endereco = document.getElementById('endereco').value;
+                const mensagem = document.getElementById('mensagem').value;
+
+                // Exibe os dados no parágrafo de resultado
+                result.innerHTML = `
+              <strong>Nome completo:</strong> ${nome} <br>
+              <strong>Email:</strong> ${email} <br>
+              <strong>Contato:</strong> ${contato} <br>
+              <strong>Endereço:</strong> ${endereco} <br>
+              <strong>Mensagem:</strong> ${mensagem} <br>
+            `;
+            });
+        </script>
+
+
+        <!--<header>
+        <h1>Página de Contato</h1>
+        <nav>
+            <ul>
+                <li><button><a href="index.html">Home</a></button></li>
+                <li><button><a href="sobre.html">Sobre</a></button></li>
+                <li><button><a href="portfolio.html">Portfólio</a></button></li>
+                <!-- Esta é a barra de navegação. Aqui, criei uma lista não ordenada (ul) com várias opções de navegação.
+                Cada opção é um item de lista (li) com um link (a) que direciona para uma página diferente do site. -->
+        <!-- </ul>
+        </nav>
+    </header>
+    <main>
+        <article>
+            <section class="contact-info">
+                <h2>Entre em Contato</h2>
+                <img style="width: 40%;" src="chuus.jpg" alt="Foto de chuu">
+
+                <form action="contato.php" method="post">
+                    <br><label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+                    <br>
+                    <br><label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+                    <br>
+                    <br><label for="whatsapp">Whatsapp:</label>
+                    <input type="tel" id="whatsapp" name="whatsapp" required>
+                    <br>
+                    <br><label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" required></textarea>
+                    <br>
+                    <button type="submit" formaction="dadosrecebidos.html">Enviar</button>
+                </form> -->
+
+        <section>
+            <p>Você pode entrar em contato comigo através do meu e-mail:</p>
+            <ul>
+                <li><a href="mailto:abv1@discente.ifpe.edu.br">abv1@discente.ifpe.edu.br</a></li>
+                <p>Ou pelas minhas redes sociais que estão no meu carrd:
+                <h6>clique na foto ⇣</h6>
+                <a href="https://licalica.carrd.co/">
+                    <img src="pochaccocurve.gif" alt="Pochacco GIF" style="width: 150px;" loop="infinite">
+</p>
+                    <!-- <ul class="social-links">
+
+                        <li><a href="https://licalica.carrd.co/"
+                                target="_blank">lica's carrd</a></li>
+                        <!-- <li><a href="https://youtube.com/@an63l1ca?si=AHVGaD5nOjpVsdPg" target="_blank">Youtube</a></li> -->
+                    <!--  <li><a href="https://open.spotify.com/user/31ukb26pvidutyj27bulrfpzbf4m?si=WjD1yuxUR_a_aN6LYA0oOw"
+                        target="_blank"></a></li>-->
+                    <!-- <li><a href="https://www.instagram.com/benignolica/profilecard/?igsh=MTN2cTlweG1vdDg0Mw=="
+                                target="_blank">Instagram</a></li> -->
+                    <!-- <li><a href="https://pin.it/3scuhRDAA" target="_blank">Pinterest</a></li> -->
+                    <!-- <li><a href="https://www.tiktok.com/@an63l1caw2e" target="_blank">TikTok</a></li> -->
+
+                    <!-- <li><a href="https://www.skoob.com.br/share/user/10911149">Skoob</a></li> -->
+            </ul>
+        </section>
+        </article>
+        </main>
+        <br><br><br><br><br><br><br><br><br> <br><br><br><br><br><br><br><br><br> <br><br><br><br><br><br><br><br><br>
+        <footer>
+            <p>&copy; 2025 Angélica Benigno de Vasconcelos & Chuu. Todos os direitos reservados.</p>
+        </footer>
+    </body>
+
+</html>
