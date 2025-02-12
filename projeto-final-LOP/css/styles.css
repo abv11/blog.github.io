@@ -1,0 +1,199 @@
+/* Corpo geral do site */
+body {
+    font-family: "Aref Ruqaa", serif;
+    background-color: #;
+    /* Tom de branco amarelado */
+    color: #844a11;
+    /* Verde-musgo suave */
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.pt-sans-regular {
+    font-family: "PT Sans", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.pt-sans-bold {
+    font-family: "PT Sans", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.pt-sans-regular-italic {
+    font-family: "PT Sans", serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.pt-sans-bold-italic {
+    font-family: "PT Sans", serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+/* Estilo para o cabeçalho */
+header {
+    background-color: #cf8932;
+    /* Vermelho suave */
+    color: #FFF;
+    /* Branco puro */
+    padding: 20px 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    /* Sombra leve */
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+    font-weight: bold;
+}
+
+
+/* Estilo principal do conteúdo */
+main {
+    padding: 20px;
+}
+
+section {
+    background-color: #FFF8E1;
+    /* Fundo amarelo pálido */
+    border: 2px solid #844a11;
+    /* Verde-musgo */
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    /* Sombra suave */
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+section h2 {
+    color: #cf8932;
+    /* Vermelho para os títulos */
+    margin-bottom: 15px;
+    font-size: 1.8em;
+}
+
+/* Botões fofos */
+button {
+    background-color: #844a11;
+    /* Verde-musgo */
+    color: #FFF;
+    border: none;
+    padding: 10px 20px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #cf8932;
+    /* Vermelho suave */
+    transform: scale(1.1);
+    /* Leve aumento */
+}
+
+/* Input de texto */
+input[type="text"] {
+    border: 2px solid #4B5320;
+    /* Verde-musgo */
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 1em;
+    width: 60%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    /* Sombra */
+}
+
+input[type="text"]::placeholder {
+    color: #BFBBCB;
+    /* Amarelo dourado para o texto do placeholder */
+}
+
+/* Rodapé */
+footer {
+    background-color: #cf8932;
+    /* Vermelho suave */
+    color: #FFF;
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-size: 0.9em;
+    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.1);
+    /* Sombra superior */
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Estilo das imagens */
+img {
+    border: 5px solid #844a11;
+    /* Borda amarela */
+    border-radius: 15px;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+    /* Sombra suave */
+    margin: 20px 0;
+    transition: transform 0.3s;
+}
+
+/*#a96a21*/
+audio {
+    width: 60%;
+    /* Largura do áudio dentro da section*/
+    border: 5px solid #844a11;
+    /* Borda amarela */
+    border-radius: 15px;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+    /* Sombra suave */
+    margin: 20px 0;
+    transition: transform 0.3s;
+}
+
+video {
+
+    border: 5px solid #844a11;
+    /* Borda amarela */
+    border-radius: 15px;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+    /* Sombra suave */
+    margin: 20px 0;
+    transition: transform 0.3s;
+}
+
+video:hower {
+    transform: scale(1.1);
+    /* Leve aumento */
+}
+
+img:hover {
+    transform: scale(1.05);
+    /* Leve aumento ao passar o mouse */
+}
+
+.nunito-<uniquifier> {
+    font-family: "Nunito", serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+}
+
+/* Letras erradas e mensagens */
+#letrasErradas {
+    color: #cf8932;
+    /* Vermelho */
+    font-weight: bold;
+}
+
+#mensagem {
+    fo66nt-size: 1.5em;
+    margin-top: 15px;
+    color: #a5ad7b;
+    /* Verde-musgo */
+}
