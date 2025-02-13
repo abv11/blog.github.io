@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz Interativo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="website icon" type="png" href="peixinho.png"> <!-- Define um icone que será exibido ao lado do titulo da
+        pagina-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <style>
+        /* Estilo do corpo e espaçamento */
+        body {
+            margin: 20px;
+        }
+
+        /* Estilo para cada pergunta */
+        .pergunta {
+            margin-bottom: 20px;
+        }
+
+        .pergunta h3 {
+            margin-bottom: 10px;
+        }
+
+        .pergunta label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        /* Estilo para respostas corretas e incorretas */
+        .correta {
+            color: green;
+        }
+
+        .incorreta {
+            color: red;
+        }
+
+        /* Estilo do botão de envio */
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+
+        /* Estilo da área de resultado */
+        #resultadoQuiz {
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        /* Estilo do contêiner geral do quiz */
+        .quiz-container {
+            border: 2px solid #4B0082;
+            /* Borda roxa */
+            padding: 20px;
+            /* Espaçamento interno */
+            border-radius: 10px;
+            /* Bordas arredondadas */
+            background-color: #FFFACD;
+            /* Fundo amarelo claro */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Quiz Interativo</h1>
+        <nav>
+            <ul>
+                <li><button><a href="index.html">Home</a></button></li>
+                <!-- <li><button><a href="sobre.html">Sobre</a></button></li> -->
+                <li><button><a href="portfolio.html">Portfólio</a></button></li>
+                <li><button><a href="contato.html">Contato</a></button></li>
+                <!-- Esta é a barra de navegação. Aqui, criei uma lista não ordenada (ul) com várias opções de navegação.
+                Cada opção é um item de lista (li) com um link (a) que direciona para uma página diferente do site. -->
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <article>
+            <section>
+                <h2>Quiz sobre o sobre</h2>
+                <img style="width: 40%;" src="chuuchorro.jpg" alt="Foto de chuu">
+                <p>Todas as perguntas são baseadas no sobre e não vale voltar para olhar. Se você ousar voltar pra
+                    olhar, the life snake e você vira o Davi Brito ou a Raquel Brito. Você quem escolhe...</p>
+                <form id="formQuiz">
+                    <!-- Primeira pergunta -->
+                    <div class="pergunta">
+                        <h3>1. Qual é o meu nome completo?</h3>
+                        <label><input type="radio" name="q1" value="b"> Angélica Benigno de Vasconcelos</label>
+                        <label><input type="radio" name="q1" value="a"> Angélica Benigno de Vasconcelo</label>
+                        <label><input type="radio" name="q1" value="c"> Angélica Benigno de Vasconcellos</label>
+                    </div>
+                    <!-- Segunda pergunta -->
+                    <div class="pergunta">
+                        <h3>2. Qual foi a música que eu coloquei no começo da página?</h3>
+                        <label><input type="radio" name="q2" value="a"> Seasons – Wave To Earth</label>
+                        <label><input type="radio" name="q2" value="c"> Love. – Wave To Earth</label>
+                        <label><input type="radio" name="q2" value="b"> Bonfire – Wave To Earth</label>
+                    </div>
+                    <!-- Terceira pergunta -->
+                    <div class="pergunta">
+                        <h3>3. Por que escolhi fazer IPI?</h3>
+                        <label><input type="radio" name="q3" value="c"> Era meu sonho </label>
+                        <label><input type="radio" name="q3" value="b"> Fui pressionada pela minha família, sobretudo
+                            minha mãe e não tive jeito até fazer um acordo de ficar pelo menos até o fim do primeiro ano
+                        </label>
+                        <label><input type="radio" name="q3" value="a"> Era a única opção de curso disponível</label>
+                    </div>
+                    <!-- Quarta pergunta -->
+                    <div class="pergunta">
+                        <h3>4. Assinale a alternativa que corresponde as duas escolas que eu estudei:</h3>
+                        <label><input type="radio" name="q4" value="b"> Colégio e Curso Real e Jayme</label>
+                        <label><input type="radio" name="q4" value="a"> Alegria do Saber e Erem Dr. Jaime
+                            Monteiro</label>
+                        <label><input type="radio" name="q4" value="c"> Colégio São José Ribeirão e Erem Dom
+                            Acácio</label>
+                    </div>
+
+                    <!-- Quinta pergunta -->
+                    <!-- Quinta pergunta -->
+                    <div class="pergunta">
+                        <h3>5. O que eu quero fazer no futuro?</h3>
+                        <label><input type="radio" name="q5" value="a"> Engenharia de Software</label>
+                        <label><input type="radio" name="q5" value="b"> Engenharia da Computação</label>
+                        <label><input type="radio" name="q5" value="c"> Engenharia de Pesca</label>
+                    </div>
+
+                    <!-- Botão para enviar as respostas -->
+                    <button type="button" onclick="verificarRespostas()">Enviar Respostas</button>
+                </form>
+                <!-- Área onde o resultado será exibido -->
+                <div id="resultadoQuiz"></div>
+            </section>
+        </article>
+    </main>
+    <script src="quiz.js"></script>
+    <footer>
+        <p>&copy; 2025 Angélica Benigno de Vasconcelos & Chuu. Todos os direitos reservados.</p>
+    </footer>
+</body>
+
+</html>
